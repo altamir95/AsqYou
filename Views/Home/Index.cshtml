@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AskDispaly.Models.Quastions>
+@{
+    ViewData["Title"] = "Каталог товаров";
+}
+<script type="text/javascript">
+
+    var questions = [];
+
+    @foreach (var d in Model)
+    {
+        @:questions.push("@d.quastion");
+    }
+
+    alert(myArray);
+
+</script>
+<script>
+
+    var random_index;
+    var sife = []
+
+    function ask (random) {
+        if (!sife[random]) {
+            sife[random] = 1;
+            this.random_index = random;
+            document.getElementById("yes").innerHTML = questions[random_index];
+        }
+        else {
+            return ask(Math.floor(Math.random() * questions.length));
+        }
+    }
+
+</script>
+<div class="gameboy">
+    <div class="display_zone_of_gameboy">
+        <div class="display_of_gameboy">
+            <p class="questions">Боишься ли ты ?</p>
+            <p class="questions" id="yes"></p>
+        </div>
+    </div>
+    <div class="buttons_place_of_gameboy">
+        <button onclick="ask (Math.floor(Math.random() * questions.length))" class="button_of_gameboy"></button>
+    </div>
+</div>
+<div class="forms">
+    <iframe class="iframe" frameborder="no" src="https://localhost:44372/Privacy"></iframe>
+</div>

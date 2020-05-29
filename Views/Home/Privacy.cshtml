@@ -1,0 +1,29 @@
+﻿@model IEnumerable<AskDispaly.Models.Asq>
+@{
+    Layout = null;
+}
+@{
+
+    ViewData["Title"] = "Каталог товаров";
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="~/css/desctop.css" />
+    <link rel="stylesheet" type="text/css" media="(max-device-width:480px)" href="~/css/mobile.css" />
+</head>
+<form class="send" method="post">
+    <textarea placeholder="Здесь вы можете предложить свой вопрос" type="text" name="asq"></textarea>
+    <div class="button_place_of_start">
+        <input class="star_button" type="submit" name="asq" />
+        <p class="tex_start_button">отправить</p>
+    </div>
+
+</form>
+
+</html>
